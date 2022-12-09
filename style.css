@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background-color: hsl(230, 100%, 99%);
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+}
+
+.pricing-bg {
+  background-color: hsl(224, 65%, 95%);
+  width: 100%;
+  height: 55%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  border-end-start-radius: 100px;
+}
+
+.pricing-head {
+  background-image: url(./images/pattern-circles.svg);
+  padding: 3em;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
+
+.head-h2 {
+  padding-bottom: 0.5em;
+  font-size: 27px;
+}
+
+.head-p {
+  color: hsl(225, 20%, 60%);
+  font-size: 14px;
+}
+
+.pricing-card {
+  padding: 2em;
+  overflow: hidden;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  color: hsl(225, 20%, 60%);
+  align-items: center;
+}
+
+.views-p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.bill-time {
+  display: flex;
+  align-items: center;
+}
+
+.price_sign {
+  font-weight: 800;
+  font-size: 30px;
+  color: hsl(227, 35%, 25%);
+}
+
+.slash {
+  padding: 0 5px;
+}
+
+.time {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.card-body {
+  margin: 2em 0;
+}
+
+.range-div {
+  width: 100%;
+  text-align: center;
+}
+
+#my_range {
+  border-radius: 10px;
+  height: 8px;
+  outline: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background: linear-gradient(
+    to right,
+    hsl(174, 77%, 80%) 0%,
+    hsl(174, 77%, 80%) 50%,
+    hsl(224, 65%, 95%) 0%,
+    hsl(224, 65%, 95%) 100%
+  );
+  width: 100%;
+}
+
+.range-bgOne {
+  background: linear-gradient(
+    to right,
+    hsl(174, 77%, 80%) 0%,
+    hsl(174, 77%, 80%) 0%,
+    hsl(224, 65%, 95%) 0%,
+    hsl(224, 65%, 95%) 100%
+  );
+}
+
+#my_range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 35px;
+  width: 35px;
+  background-image: url(./images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-color: hsl(174, 86%, 45%);
+  background-position: center;
+  border-radius: 100px;
+  box-shadow: hsl(174, 86%, 45%) 0px 20px 30px -5px;
+  cursor: pointer;
+}
+
+#my_range:hover::-webkit-slider-thumb {
+  filter: brightness(1.1);
+}
+
+.billing {
+  margin: 3em 0 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 1em;
+}
+
+.billing::before {
+  content: "";
+  position: absolute;
+  width: 115%;
+  height: 0.1px;
+  background-color: hsl(223, 50%, 87%);
+  bottom: -3em;
+  left: -2em;
+}
+
+.time-billing {
+  font-size: 12px;
+  color: hsl(225, 20%, 60%);
+}
+
+.discount {
+  font-size: 10px;
+  padding: 3px 5px;
+  color: hsl(15, 100%, 70%);
+  background-color: hsl(14, 92%, 95%);
+  border-radius: 10px;
+}
+
+.switch {
+  background-color: hsl(223, 50%, 87%);
+  width: 45px;
+  height: 23px;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.bg_change {
+  background-color: hsl(174, 86%, 45%);
+}
+
+.switch-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.slider {
+  width: 18px;
+  height: 18px;
+  background-color: hsl(230, 100%, 99%);
+  top: 2.5px;
+  left: 3.5px;
+  position: absolute;
+  border-radius: 100px;
+  transition: all 300ms;
+}
+
+.switch-input:checked + .slider {
+  transform: translateX(100%);
+}
+
+.card-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-contents {
+  font-size: 12px;
+  color: hsl(225, 20%, 60%);
+  gap: 1em;
+  display: flex;
+  margin-bottom: 0.7em;
+}
+
+#trial {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(227, 35%, 25%);
+  border-radius: 18px;
+  font-size: 12px;
+  padding: 0.8em 2.7em;
+  outline: none;
+  border: none;
+}
+
+#trial:hover {
+  filter: brightness(1.2);
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    
+    height: 110vh;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .pricing-card {
+    width: 100%;
+  }
+
+  .billing {
+    gap: 5px;
+    text-align: center;
+  }
+
+  .card-foot {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #trial {
+    margin-top: 1em;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .card-head {
+    flex-direction: column;
+    text-align: center;
+  }
+}
